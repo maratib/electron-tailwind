@@ -4,7 +4,8 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "start": "electron . & npm run build:css",
+    "build:css": "watch 'postcss css/tailwind.css -o dist/tailwind.css' ./css "
   },
   "repository": "https://github.com/electron/electron-quick-start",
   "keywords": [
@@ -17,6 +18,11 @@
   "author": "GitHub",
   "license": "CC0-1.0",
   "devDependencies": {
-    "electron": "^8.2.5"
+    "autoprefixer": "^9.7.6",
+    "electron": "^8.2.5",
+    "electron-reload": "^1.5.0",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.5",
+    "watch": "^1.0.2"
   }
 }
