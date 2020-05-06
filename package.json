@@ -4,7 +4,7 @@
   "description": "A minimal Electron application",
   "main": "main.js",
   "scripts": {
-    "start": "electron . & npm run build:css",
+    "start": "npm run build:css & electron . ",
     "build:css": "watch 'postcss css/tailwind.css -o dist/tailwind.css' ./css "
   },
   "repository": "https://github.com/electron/electron-quick-start",
